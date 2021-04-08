@@ -105,8 +105,7 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
                 String filterPattern = constraint.toString().toLowerCase().trim();
                 for (Members member : membersListFull) {
                     if (member.getFirstname().toLowerCase().contains(filterPattern)
-                    || member.getLastname().toLowerCase().contains(filterPattern)||
-                    member.getOccupation().toLowerCase().contains(filterPattern)) {
+                            || member.getEmail().toLowerCase().contains(filterPattern)) {
                         filteredList.add(member);
                     }
                 }
@@ -115,6 +114,7 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
             results.values = filteredList;
             return results;
         }
+
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
             membersList.clear();
