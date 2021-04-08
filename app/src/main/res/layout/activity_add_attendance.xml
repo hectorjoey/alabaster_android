@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.AddAttendanceActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/attendance" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#983CFF"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="Church Attendance"
+                android:textColor="#ffff"
+                android:textSize="25sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dateOfAttendance"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date"
+                android:padding="4dp"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_dateOfAttendance"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:inputType="date"
+                    android:padding="4dp"
+                    android:textColor="@color/colorDark" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--NumberOfMen-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutNumberOfMen"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number Of Men"
+                android:padding="4dp"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/numberOfMen"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:hint="Number Of Men"
+                    android:inputType="number"
+                    android:padding="4dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--  NumberOfWomen Label -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutNumberOfWomen"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number Of Women"
+                android:padding="4dp"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/numberOfWomen"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:hint="Number Of Women"
+                    android:inputType="number"
+                    android:padding="4dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- numberOfChildren label-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutNumberOfChildren"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number Of Children"
+                android:padding="4dp"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/numberOfChildren"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:hint="Number Of Children"
+                    android:inputType="number"
+                    android:padding="4dp"
+                    android:textAllCaps="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#c0c0c0" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#c0c0c0" />
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/saveAttendance"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="40dp"
+                android:text="Save"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

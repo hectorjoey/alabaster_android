@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hector.developers.alabaster">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher1"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Alabaster">
+        <activity android:name=".details.RequestDetailActivity" />
+        <activity android:name=".activities.CreateRequestActivity" />
+        <activity android:name=".list.RequestListActivity" />
+        <activity android:name=".list.ViewTodayRevenueActivity" />
+        <activity android:name=".list.ViewTodayAttendanceActivity" />
+        <activity android:name=".details.MembersDetailsActivity" />
+        <activity android:name=".details.FinanceDetailsActivity" />
+        <activity android:name=".list.FinanceListActivity" />
+        <activity android:name=".details.BirthdayDetailsActivity" />
+        <activity android:name=".list.AttendanceListActivity" />
+        <activity android:name=".list.BirthListActivity" />
+
+        <activity android:name=".list.MemberListActivity" />
+        <activity android:name=".activities.AddMemberActivity" />
+        <activity android:name=".activities.FinanceActivity" />
+        <activity android:name=".activities.AddAttendanceActivity" />
+        <activity android:name=".activities.SocialActivity" />
+        <activity android:name=".activities.RequestActivity" />
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>
